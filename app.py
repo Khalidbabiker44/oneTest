@@ -1,14 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route("/",methods=["GET"])
+@app.route("/",methods=["GET","POST"])
 def index():
     return  "hello world"
 
 
 
-if __name__ == "__main__":
-    
-    app.run(host="localhost")
+app.run()
